@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Periodic Fun</string>
+    <string name="menu">Menu</string>
+    <string name="social">Connect with the developer:</string>
+    <string name="caption">Remind yourself to take a break</string>
+    <string name="menu1">Jokes</string>
+    <string name="menu2">Puns</string>
+    <string name="menu3">Songs</string>
+    <string name="menu4">Memes</string>
+    <string name="menu5">Night Mode</string>
+    <string name="menu6">Settings</string>
+    <string name="org_name">Braginnova Apps</string>
+    <string name="ver_name">v 1.0.0</string>
+    <string name="social4">Facebook</string>
+    <string name="social3">Twitter</string>
+    <string name="social2">Instagram</string>
+    <string name="social1">Google</string>
+    <string name="day_mode">Day Mode</string>
+    <string name="night_mode">Night Mode</string>
+</resources>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="1"
+    android:padding="20dp"
+    android:background="@color/colorWhitish"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_weight="0.25"
+        android:background="@drawable/curve_blue_bg">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            tools:ignore="NestedWeights"
+            android:id="@+id/titleText"
+            android:autoSizeTextType="uniform"
+            app:autoSizeTextType="uniform"
+            android:text="@string/app_name"
+            tools:targetApi="o" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:autoSizeTextType="uniform"
+            app:autoSizeTextType="uniform"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:padding="4dp"
+            android:id="@+id/captionText"
+            android:text="@string/caption"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"/>
+
+    <TextView
+        android:id="@+id/menuText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:gravity="center"
+        android:padding="5dp"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
+        android:text="@string/menu"
+        android:layout_gravity="center"
+        tools:targetApi="o" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.36"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033"
+            tools:ignore="NestedWeights" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/jokesSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/curve_white_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/menu1"
+                    android:src="@drawable/jokes"
+                    tools:ignore="NestedWeights" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:id="@+id/jokeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu1"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
+            <LinearLayout
+                android:id="@+id/punsSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1"
+                android:background="@drawable/curve_white_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/pun_icon"
+                    tools:ignore="NestedWeights"
+                    android:contentDescription="@string/menu2" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:id="@+id/punsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu2"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
+            <LinearLayout
+                android:id="@+id/songsSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1"
+                android:background="@drawable/curve_white_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/music"
+                    tools:ignore="NestedWeights"
+                    android:contentDescription="@string/menu3" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:id="@+id/songsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu3"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/memesSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1"
+                android:background="@drawable/curve_white_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/meme"
+                    tools:ignore="NestedWeights"
+                    android:contentDescription="@string/menu4" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:id="@+id/memeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu4"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
+            <LinearLayout
+                android:id="@+id/themeSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1"
+                android:background="@drawable/curve_white_bg">
+
+                <ImageView
+                    android:id="@+id/theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/night_mode"
+                    tools:ignore="NestedWeights"
+                    android:contentDescription="@string/menu5" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:id="@+id/themeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu5"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
+            <LinearLayout
+                android:id="@+id/settingsSwitch"
+                android:onClick="onSwitchClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="1"
+                android:background="@drawable/curve_white_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/settings"
+                    tools:ignore="NestedWeights"
+                    android:contentDescription="@string/menu6" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"/>
+
+                <TextView
+                    android:id="@+id/settingsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/menu6"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.033" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"/>
+
+    <LinearLayout
+        android:id="@+id/socialTab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_weight="0.2"
+        android:background="@drawable/curve_white_bg"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/socialText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            tools:ignore="NestedWeights"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/colorDarkBlue"
+            android:text="@string/social"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.025"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:padding="4dp"
+                android:src="@drawable/google"
+                android:contentDescription="@string/social1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:padding="10dp"
+                android:src="@drawable/instagram"
+                android:contentDescription="@string/social2" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:padding="8dp"
+                android:src="@drawable/twitter"
+                android:contentDescription="@string/social3" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:padding="8dp"
+                android:src="@drawable/facebook"
+                android:contentDescription="@string/social4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/org_name"
+        android:layout_height="0dp"
+        android:layout_weight="0.04"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/ver_name"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"/>
+
+</LinearLayout>
